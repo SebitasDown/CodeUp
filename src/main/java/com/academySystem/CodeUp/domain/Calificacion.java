@@ -4,16 +4,15 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "calificaciones")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "calificaciones")
 public class Calificacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_calificacion")
-    private Long id;
+    private Long idCalificacion;
 
     @Column(nullable = false)
     private Double nota;

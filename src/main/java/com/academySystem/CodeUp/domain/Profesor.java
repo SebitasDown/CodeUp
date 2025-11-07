@@ -4,23 +4,16 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "profesores")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "profesores")
 public class Profesor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_profesor")
-    private Long id;
+    private Long idProfesor;
 
     @Column(nullable = false, length = 80)
     private String nombre;
-
-    @Column(nullable = false, unique = true, length = 100)
-    private String email;
-
-    @Column(nullable = false, length = 100)
-    private String especialidad;
 }
